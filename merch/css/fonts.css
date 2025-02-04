@@ -1,0 +1,33 @@
+@font-face {
+    font-family: Acme;
+    src: 
+         url('https://monstrocities.io/css/fonts/avenir-next-bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+@font-face {
+    font-family: Acme;
+    src: 
+         url('https://monstrocities.io/css/fonts/avenir-next-regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+
+
+
+/* Webfont: Lato-Regular */@font-face {
+    font-family: 'LatoWeb';
+    src: 
+         url('https://monstrocities.io/css/fonts/LatoLatin-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('https://monstrocities.io/css/fonts/LatoLatin-Regular.woff') format('woff'); /* Modern Browsers */
+
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}

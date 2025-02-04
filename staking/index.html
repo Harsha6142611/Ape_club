@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<html data-wf-page="6143c6fb05412b1bc933d7d3" data-wf-site="6143c6fb05412be0e033d7d2">
+<head>
+<meta charset="utf-8">
+<title>LBAC Staking DayCare</title>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="Webflow" name="generator">
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link href="css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/siiimple-toast/dist/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/siiimple-toast/dist/siiimple-toast.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.5/web3.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+        <script>const currentPage = "home";</script>
+
+    <style>
+        body, .headline, .segment-wrapper .description h3, .feature, .auctions-wrapper .description .auctions .auction .name, .auctions-wrapper .description .auctions .auction .winner, .btnBuy  {
+        font-family: 'Marvel', sans-serif;
+        }
+
+
+	
+	
+	
+	a.class_A1{ /* Стиль ссылки по умолчанию */
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	}
+	a.class_A1:hover{ /* Стиль ссылки при наведение */
+	color: #ffe400;	/* Изменяем цвет на красный */
+	text-decoration: none; /* Добавляем подчеркивание */
+
+	}
+	
+	
+	
+		a.class_A2{ /* Стиль ссылки по умолчанию */
+	color: white;
+	text-decoration: none;
+	}
+	a.class_A2:hover{ /* Стиль ссылки при наведение */
+	color: white;
+	text-decoration: none;
+
+	}
+	
+	
+	
+	
+
+        .auction .feature { 
+            margin-bottom: 10px;
+        }
+        
+        .text { 
+            line-height: 1.5rem;
+            text-align: justify;
+            font-family: 'Marvel', sans-serif;
+        }
+        
+        .auctions-wrapper .description .auctions .auction .winner  {
+            line-height: 1.5rem;   
+                                font-family: 'Marvel', sans-serif;
+        }
+        
+        .disclaimer {
+            line-height: 1.5rem;
+           margin-right: auto;
+            margin-left: auto;
+                                font-family: 'Marvel', sans-serif;
+
+        }
+        .disclaimermobile {
+            line-height: 1.5rem;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .auctions-wrapper .description .auctions .auction .name {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .total {
+            font-weight: 900 !important;
+            color: #c9fff6;
+            border-bottom: 1px solid #c9fff6;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .auctions-wrapper .description .auctions {
+            justify-content: center;
+        }
+        
+        .btnBuy {
+            padding: 10px;
+            font-size: 2rem;
+            background-color: #69d47c;
+            width: 300px;
+            height: auto;
+            margin: auto;
+            
+        }
+        .segment-wrapper .punk-image {
+            overflow: clip;
+            width: auto;
+            max-width: 400px;
+            height: auto;
+        }
+        
+        .segment-wrapper .punk-image img {
+            width: auto;
+            max-width: 400px;
+            height: auto;
+            border-radius: 30px;
+        }
+        
+        .modal__title {
+            color: #ff0000 !important;
+            margin: auto;
+            vertical-align: top
+        }
+        
+        .button, .button__blue, .button__secondary, .button__wide, .button__wide__secondary {
+            background-color: #69d47c;
+        }
+        
+        .headline {
+            font-size: 50px;
+            margin: 50px;
+        }
+        
+        
+        .monstrocontainer {
+    bottom: 0;
+    left: 0;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+.monstrocontainer img {
+    width: 100%;
+    height: auto;
+      border-radius: 30px;
+      
+}
+
+    @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap');
+
+body2 {
+	 font-family: 'Saira Condensed', sans-serif;
+	background: #353535;
+	color: #FFF;
+}
+.jumbotron h1 {
+	color: #353535;
+}
+footer2 {
+  margin-bottom: 0 !important;
+  margin-top: 0;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+}
+span.icon {
+	margin: 0 5px;
+	color: #D64541;
+}
+h2 {
+	color: #BDC3C7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.mrng-60-top {
+	margin-top: 60px;
+}
+/* Global Button Styles */
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 5px auto 0;
+	padding: 5px 5px;
+	color: #fff;
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.animated-button-mint:link, a.animated-button-mint:visited {
+	position: relative;
+	display: block;
+	margin: 5px auto 0;
+	padding: 5px 5px;
+	color: #FFFD9C;
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.animated-button-mint2:link, a.animated-button-mint2:visited {
+	color: #FFFD9C;
+	font-weight: bold;
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+	content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	z-index: -1;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+	color: #FFF;
+	text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+	height: 450%;
+}
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 5px auto 0;
+	padding: 5px 5px;
+	color: #fff;
+	font-size:14px;
+	border-radius: 0;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+
+.centerimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.img_mobile {
+    margin:auto;
+    width: 100%; 
+    max-width: 100%; 
+    height: auto;
+}
+      
+      .centerimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+      
+      
+   .div-6u{
+width:50%;
+clear:none;
+margin-left:auto;
+margin-right:auto;
+
+}  
+
+hr{
+        height: 2px;
+        background-color: #0f2335;
+        border: none;
+    }
+      
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+       
+       
+       #countdown_cm {
+      min-width: 250px;
+    min-height: 20px;
+ display: flex;
+    justify-content: center
+}
+#countdown_cm .time {
+	text-align: center;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center
+}
+#countdown_cm .time span {
+	color: rgb(255,255,255);
+    font-size: 38px;
+    line-height: 1;
+    border-radius: 3px;
+    padding: 6px 5px 5px;
+    letter-spacing: 0.7px;
+     display: flex;
+    justify-content: center
+}
+#countdown_cm .time label {
+    font-weight: 700;
+    color: white;
+    margin: 10px 0px 0px;
+    line-height: 1;
+     display: flex;
+    justify-content: center
+}
+      
+      a.button2{
+  display:inline-block;
+	
+	text-decoration:none;	
+	
+	color:rgba(253, 233, 58, 1);
+	brackground-color:transparent;
+	border:1px solid rgba(253, 233, 58, 1);
+	border-radius:100px;
+	background-color: transparent;
+  border: 0;
+  outline: none;
+	padding: .3em 1.2em;
+	margin:5px;
+			
+	background-size: 200% 100%;	
+	background-image: linear-gradient(to right, transparent 50%, rgba(253, 233, 58, 1) 50%);
+	transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+}
+
+a.button2:hover{
+	color:rgba(22, 29, 39, 1);
+	background-color:rgba(253, 233, 58, 1);
+	background-position: -100% 100%;
+}
+
+
+
+.button2{
+  display:inline-block;
+	
+	text-decoration:none;	
+	
+	color:rgba(253, 233, 58, 1);
+	brackground-color:transparent;
+	border:1px solid rgba(253, 233, 58, 1);
+	border-radius:100px;
+	background-color: transparent;
+   
+  outline: none;
+	padding: .3em 1.2em;
+	margin:5px;
+			
+	background-size: 200% 100%;	
+	background-image: linear-gradient(to right, transparent 50%, rgba(253, 233, 58, 1) 50%);
+	transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+}
+
+.button2:hover{
+	color:rgba(22, 29, 39, 1);
+	background-color:rgba(253, 233, 58, 1);
+	background-position: -100% 100%;
+}
+
+
+
+ a.button3{
+  display:inline-block;
+	
+	text-decoration:none;	
+	
+	color:rgba(230, 44, 186, 1);
+	brackground-color:transparent;
+	border:1px solid rgba(230, 44, 186, 1);
+	border-radius:100px;
+	
+	padding: .3em 1.2em;
+	margin:5px;
+			
+	background-size: 200% 100%;	
+	background-image: linear-gradient(to right, transparent 50%, rgba(230, 44, 186, 1) 50%);
+	transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+}
+
+a.button3:hover{
+	color:rgba(22, 29, 39, 1);
+	background-color:rgba(230, 44, 186, 1);
+	background-position: -100% 100%;
+}
+ 
+        
+    </style>
+    
+  
+    <script>
+function hoverland(element) {
+  element.setAttribute('src', 'images/land.jpg');
+}
+
+function unhoverland(element) {
+  element.setAttribute('src', 'images/landtest.jpg');
+}
+</script>
+    <script>
+function hoverair(element) {
+  element.setAttribute('src', 'images/air.jpg');
+}
+
+function unhoverair(element) {
+  element.setAttribute('src', 'images/airtest.jpg');
+}
+</script>
+    <script>
+function hoverfire(element) {
+  element.setAttribute('src', 'images/fire.jpg');
+}
+
+function unhoverfire(element) {
+  element.setAttribute('src', 'images/firetest.jpg');
+}
+</script>
+    <script>
+function hoverwater(element) {
+  element.setAttribute('src', 'images/water.jpg');
+}
+
+function unhoverwater(element) {
+  element.setAttribute('src', 'images/watertest.jpg');
+}
+</script>
+
+
+
+    <script>
+function needelman(element) {
+  element.setAttribute('src', 'images/land.jpg');
+}
+
+function shortenAddress(address) {
+            return address.slice(0, 6) + "..." + address.slice(-4);
+  }
+
+let web3;
+let userAccount = ""
+  
+
+async function connect() {
+    try {
+        // Check if Rabby is installed by checking for specific Rabby properties
+        if (!window.ethereum?.isRabby) {
+            alert("Please install Rabby Wallet! This button is specifically for Rabby wallet.");
+            document.getElementById("wallet").innerText = "Install Rabby";
+            return;
+        }
+
+        // Check if multiple providers exist (MetaMask + Rabby)
+        if (window.ethereum.providers) {
+            // Find Rabby in the list of providers
+            const provider = window.ethereum.providers.find(provider => provider.isRabby);
+            if (!provider) {
+                alert("Rabby wallet not found. Please install Rabby.");
+                return;
+            }
+            // Use Rabby specifically
+            window.ethereum = provider;
+        }
+
+        // Request account access from Rabby
+        const accounts = await window.ethereum.request({ 
+            method: "eth_requestAccounts" 
+        });
+        
+        userAccount = accounts[0];
+        connected = true;
+        
+        // Initialize Web3 with Rabby provider
+        web3 = new Web3(window.ethereum);
+
+        // Update UI
+        document.getElementById("wallet").innerText = 
+            "Connected: " + shortenAddress(userAccount);
+        document.getElementById("wallet").style.backgroundColor = "green";
+
+        // Add event listener for account changes
+        window.ethereum.on('accountsChanged', function (accounts) {
+            if (accounts.length === 0) {
+                // Handle disconnection
+                document.getElementById("wallet").innerText = "Connect Rabby";
+                document.getElementById("wallet").style.backgroundColor = "";
+                connected = false;
+                userAccount = null;
+            } else {
+                // Handle account change
+                userAccount = accounts[0];
+                connected = true;
+                document.getElementById("wallet").innerText = 
+                    "Connected: " + shortenAddress(userAccount);
+            }
+        });
+
+        // Add disconnect handler
+        window.ethereum.on('disconnect', () => {
+            document.getElementById("wallet").innerText = "Connect Rabby";
+            document.getElementById("wallet").style.backgroundColor = "";
+            connected = false;
+            userAccount = null;
+        });
+
+        console.log("Connected to Rabby:", userAccount);
+    } catch (error) {
+        console.error("Rabby connection error:", error);
+        if (error.code === 4001) {
+            document.getElementById("wallet").innerText = "Connection Rejected";
+        } else {
+            document.getElementById("wallet").innerText = "Connection Failed";
+        }
+    }
+}
+
+async function cheethAbi(){
+ 
+ let abi = await fetch('./abis/cheeth.json')
+            .then(response => response.json())  // Convert response to JSON
+            .catch(error => console.error("Error loading JSON:", error));
+  return abi
+};
+
+let connected = false;
+
+const cheethAddress = "0x0DdF1dAc8537C90b0a96Bdf05A8c9eD78ccD26cA";
+
+  async function intializeCheethContract(){
+    const web3 = new Web3(window.ethereum)
+    let abi = await cheethAbi()
+    console.error(abi)
+     return new web3.eth.Contract(abi, cheethAddress);
+  }
+
+
+  const claimCheeth = async () => {
+    try {
+      if(!connected){
+        alert("Please connect to MetaMask");
+        return;
+      }
+      const cheeth = await intializeCheethContract()
+    const resp = await cheeth.methods.claimAll().send({from :userAccount});
+    if (resp){
+      alert("Cheeth claimed successfully", resp);
+      window.location.reload();
+  
+    }
+      
+    } catch (error) {
+      alert("Error", error.message)
+    }
+};
+
+function unneedelman(element) {
+  element.setAttribute('src', 'images/needelman.png');
+}
+</script>
+<!-- Ensure the Ethers.js library is loaded before your custom script -->
+<!-- <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.5/ethers.umd.min.js" type="application/javascript"></script>
+<script src="scripts/ethers.js"></script>
+</head>
+<body>
+ <div class="background-wrapper container">
+        <div class="container">
+                     
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+        <br>
+         <a class="class_A2" href="../index.html"><img src="https://lilbabyapes.com/images/IMG_4296.PNG" alt="Logo" width="329" height="413">
+         </a>
+          <br>
+<h1 class="heading">LBAC Staking DayCare</h1>
+<br>
+   </div>
+  </div>
+    <h4><div class="row" align="center">
+    
+
+<div class="col-md-12 text-center" id="mice-tracker1"> 🍌 ? 🍌</div><br><br>
+</div></h4>
+
+<div class="col-md-12 text-center">
+    <hr>
+    <br>
+     <h3 "title" align="center">    <b>
+<!-- <button class="button2" onclick="connect()" id="wallet">Connect Rabby</button> -->
+<button class="button2" onclick="connectWallet()" id="metamask-wallet">Connect Wallet</button>
+</b></h3>
+<br>
+</div>
+
+
+<br>
+<div class="col-md-12 text-center">
+<div class="col-md-12 text-center"><font color="grey"><h4>Your Staked Lil Baby Apes</h4></font></div>
+<h3><div class="col-md-12 text-center" id="your-staked-anonymices">Connect Wallet First!</div></h3>
+<h4><div class="col-md-12 text-center" id="staked-mice-images"></div></h4><br>
+</div>
+
+<br><br>
+<div class="col-md-12 text-center">
+<font color="grey"><h4><div class="col-md-12 text-center">Your LILBANANA</div></h4></font>
+<h3><font color="white"><div class="col-md-12 text-center" id="your-cheeth">0</div></font></h3>
+</div><br>
+<div class="col-md-12 text-center">
+<font color="grey"><h4><div class="col-md-12 text-center">Your Pending LILBANANA</div></h4></font>
+<h3><div class="col-md-12 text-center" id="your-pending-cheeth">0</div></h3>
+</div>
+<div class="col-md-12 text-center">
+    
+
+<h3><a class="button2" onclick=claimCheeth()>Claim LILBANANA</a></h3>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+<div class="col-md-12 text-center">
+    <br>
+<br>
+
+
+<h3><a href="././stake" class="button2">Stake Baby</a><a href="././unstake" class="button2">Unstake Baby</a></h3>
+</div>
+
+<br>
+<br>
+
+
+<br><br>
+<hr>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<div class="col-md-12 text-center">
+<div class="col-md-12 text-center">
+    <div class="col-md-12 text-center">
+    
+
+<h3><a target="blank" href="https://app.uniswap.org/#/swap?inputCurrency=0x0ddf1dac8537c90b0a96bdf05a8c9ed78ccd26ca&outputCurrency=ETH" class="button3">Trade on Uniswap</a></h3>
+</div><br>
+<div col-md-12 text-center><font color="grey">Lil Baby Ape Club Contract:</font> <a target="blank" href="https://etherscan.io/address/0x918f677b3ab4b9290ca96a95430fd228b2d84817">0x918f677b3ab4b9290ca96a95430fd228b2d84817</a><br><div col-md-12 text-center><font color="grey">Lil Banana Contract: </font><a target="blank" href="https://etherscan.io/address/0x0ddf1dac8537c90b0a96bdf05a8c9ed78ccd26ca">0x0ddf1dac8537c90b0a96bdf05a8c9ed78ccd26ca</a><br><br></div>
+</div>
+</div>
+<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6143c6fb05412be0e033d7d2" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="js/webflow0.js" type="text/javascript"></script>
+<!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+<script>
+  function test() {
+    alert('Wallet connected!');
+
+}
+</script>
+
+<script>
+async function connectWallet() {
+    try {
+        // Specifically check for MetaMask
+        if (!window.ethereum?.isMetaMask) {
+            alert("Please install MetaMask! Other wallets are not supported for this button.");
+            document.getElementById("metamask-wallet").innerText = "Install MetaMask";
+            return;
+        }
+
+        // Check if another wallet (like Rabby) is also installed
+        if (window.ethereum.providers) {
+            // Find MetaMask in the list of providers
+            const provider = window.ethereum.providers.find(provider => provider.isMetaMask);
+            if (!provider) {
+                alert("MetaMask not found. Please install MetaMask.");
+                return;
+            }
+            // Use MetaMask specifically
+            window.ethereum = provider;
+        }
+
+        // Request account access specifically from MetaMask
+        const accounts = await window.ethereum.request({ 
+            method: "eth_requestAccounts",
+        });
+        
+        userAccount = accounts[0];
+        connected = true;
+        
+        // Initialize Web3 specifically with MetaMask provider
+        web3 = new Web3(window.ethereum);
+
+        // Update UI
+        document.getElementById("metamask-wallet").innerText = 
+            "Connected: " + (userAccount.slice(0, 6) + "..." + userAccount.slice(-4));
+        document.getElementById("metamask-wallet").style.backgroundColor = "green";
+
+        // Add event listener for account changes
+        window.ethereum.on('accountsChanged', function (accounts) {
+            if (accounts.length === 0) {
+                // Handle disconnection
+                document.getElementById("metamask-wallet").innerText = "Connect MetaMask";
+                document.getElementById("metamask-wallet").style.backgroundColor = "";
+                connected = false;
+                userAccount = null;
+            } else {
+                // Handle account change
+                userAccount = accounts[0];
+                connected = true;
+                document.getElementById("metamask-wallet").innerText = 
+                    "Connected: " + (userAccount.slice(0, 6) + "..." + userAccount.slice(-4));
+            }
+        });
+
+        // Add disconnect handler
+        window.ethereum.on('disconnect', () => {
+            document.getElementById("metamask-wallet").innerText = "Connect MetaMask";
+            document.getElementById("metamask-wallet").style.backgroundColor = "";
+            connected = false;
+            userAccount = null;
+        });
+
+        console.log("Connected to MetaMask:", userAccount);
+    } catch (error) {
+        console.error("MetaMask connection error:", error);
+        if (error.code === 4001) {
+            document.getElementById("metamask-wallet").innerText = "Connection Rejected";
+        } else {
+            document.getElementById("metamask-wallet").innerText = "Connection Failed";
+        }
+    }
+}
+</script>
+</body>
+</html>

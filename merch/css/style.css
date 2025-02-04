@@ -1,0 +1,619 @@
+body {
+  font-family: Marvel;
+  background: #091723;
+}
+
+.disclaimer-footer {
+  font-size: 60%;
+  color: gray;
+}
+
+.loaded-content {
+  overflow: hidden;
+}
+
+.background-wrapper {
+  background: #091723;
+  padding-bottom: 4rem;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+              border-radius: 30px;
+
+}
+
+.test {
+  font-family: Marvel;
+}
+
+.headline {
+  font-family: "Avenir Next Bold";
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 4rem;
+}
+
+.segment-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.segment-wrapper .description {
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 120%;
+}
+
+.segment-wrapper .description h3 {
+  font-family: "Avenir Next Bold";
+  margin-bottom: 2rem;
+}
+
+.segment-wrapper .punk-image {
+  width: 45%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.segment-wrapper .punk-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.segment-wrapper .left {
+  padding-right: 2.5%;
+}
+
+.segment-wrapper .right {
+  padding-left: 2.5%;
+}
+.feature {
+  color: #ee5825;
+  font-family: "Avenir Next Bold";
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.feature:hover {
+  color: white;
+}
+
+.disclaimer {
+  font-size: 75%;
+  text-align: center;
+  margin-top: 1rem;
+  color: gray;
+}
+
+.carousel-wrapper {
+  padding-top: 4rem;
+}
+
+#punks-carousel {
+  width: 100%;
+  background: #648596;
+}
+
+#punks-carousel .owl-dots {
+  display: none;
+}
+
+#punks-carousel .owl-item {
+  width: calc(10vw - 1.75px);
+  min-height: 0;
+}
+
+#punks-carousel .owl-item .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#punks-carousel .owl-item .group .punk {
+  cursor: pointer;
+  position: relative;
+}
+
+#punks-carousel .owl-item .group .punk .name-background {
+  font-family: "Avenir Next Bold";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #151515a3;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#punks-carousel .owl-item .group .punk .name-background span {
+  display: block;
+}
+
+#punks-carousel .owl-item .group .punk .name-background a {
+  float: clear;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ee5825;
+  color: white;
+  padding: 0.35rem 0.65rem;
+  max-width: 10vw;
+  width: 7.5vw;
+  margin-top: 0.5rem;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Avenir Next';
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  pointer-events: all;
+}
+
+#punks-carousel .owl-item .group .punk .name-background a.clickable {
+  pointer-events: all;
+}
+
+#punks-carousel .owl-item .group .punk .name-background a:hover {
+  background: white;
+  color: black;
+  text-decoration: none;
+}
+
+#punks-carousel .owl-item .group .punk:hover .name-background {
+  opacity: 1;
+}
+
+#punks-carousel .owl-item .group .punk:hover .name-background a {
+  z-index: 1;
+}
+
+.community {
+  padding-top: 4rem;
+}
+
+.community .discord {
+  margin-left: auto;
+  margin-right: auto;
+  background: #ee5825;
+  color: white;
+  padding: 0.35rem 1rem;
+  max-width: 150px;
+  width: 150px;
+  margin-top: 1rem;
+  border-radius: 20px;
+  text-align: center;
+  font-family: "Avenir Next Bold";
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.community .discord:hover {
+  background: white;
+}
+
+.community .discord:hover a {
+  color: black;
+}
+
+.community .discord a {
+  color: white;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.community .discord a:hover {
+  text-decoration: none;
+}
+
+.trade {
+  padding-top: 4rem;
+}
+
+.trade .trade-wrapper {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.trade .description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trade .description .opensea {
+  background: #ee5825;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  padding: 0.35rem 1rem;
+  max-width: 150px;
+  width: 150px;
+  margin-top: 1rem;
+  border-radius: 20px;
+  text-align: center;
+  font-family: "Avenir Next Bold";
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.trade .description .opensea:hover {
+  background: white;
+}
+
+.trade .description .opensea:hover a {
+  color: black;
+}
+
+.trade .description .opensea a {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  color: white;
+}
+
+.trade .description .opensea a:hover {
+  text-decoration: none;
+}
+
+.trade .description h3 {
+  margin-bottom: 0.5rem;
+}
+
+.faq {
+  padding-top: 4rem;
+  margin-bottom: 4rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.faq h3 {
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+  font-family: "Avenir Next Bold";
+}
+
+.faq .wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+.faq .question {
+  font-family: "Avenir Next Bold";
+}
+
+.meet-the-artist {
+  padding-top: 4rem;
+}
+
+.auctions-wrapper {
+  padding-top: 4rem;
+}
+
+.auctions-wrapper .title {
+  margin-bottom: 1rem;
+}
+
+.auctions-wrapper .disclaimer {
+  margin-bottom: 1rem;
+}
+
+.auctions-wrapper .description {
+  width: 100%;
+}
+
+.auctions-wrapper .description h3 {
+  margin-bottom: 0rem;
+}
+
+.auctions-wrapper .description .auctions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.auctions-wrapper .description .auctions .auction {
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  width: 20%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.auctions-wrapper .description .auctions .auction a {
+  text-decoration: none;
+  height: 100%;
+}
+
+.auctions-wrapper .description .auctions .auction .name {
+  margin-top: 0.5rem;
+}
+
+.auctions-wrapper .description .auctions .auction .winner {
+  font-size: 75%;
+  color: white;
+  font-family: "Avenir Next Bold";
+  text-align: center;
+}
+
+.auctions-wrapper .description .auctions .auction .block {
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+}
+
+.auctions-wrapper .description .auctions .auction .block:hover .feature {
+  color: white;
+}
+
+.auctions-wrapper .description .auctions .auction:hover {
+  opacity: 1;
+}
+
+.stats {
+  margin-bottom: 0;
+}
+
+.stats .stats-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.stats .stats-inner .stat {
+  width: 32%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+
+.stats .stats-inner .stat .icon {
+  max-width: 75px;
+  margin-bottom: 0.75rem;
+}
+
+.stats .stats-inner .stat .description {
+  width: 100%;
+  font-family: "Avenir Next Bold";
+}
+
+.stats .stats-inner .stat .big {
+  font-family: "Avenir Next Bold";
+}
+
+.nopadding-container {
+  padding: 0;
+}
+
+footer {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer {
+  position: relative;
+  height: 140px;
+  padding-top: 1rem;
+}
+
+footer .nft-guild {
+  display: block;
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1600px) {
+  #punks-carousel .owl-item .group .punk .name-background a {
+    font-size: 1vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  #punks-carousel .owl-item .group .punk .name-background span {
+    font-size: 1.25vw;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  #punks-carousel .owl-item .group .punk .name-background {
+    opacity: 0;
+  }
+  #punks-carousel .owl-item .group .punk:hover .name-background {
+    opacity: 0;
+  }
+  #punks-carousel .owl-item .group .punk.active .name-background {
+    opacity: 1;
+  }
+  #punks-carousel .owl-item .group .punk .name-background span {
+    font-size: 1.5vw;
+  }
+  #punks-carousel .owl-item .group .punk .name-background a {
+    font-size: 1.15vw;
+  }
+  #punks-carousel .owl-item .group .punk .name-background a {
+    pointer-events: none;
+  }
+  #punks-carousel .owl-item {
+    width: 14.28vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .auctions-wrapper .description .auctions .auction .block.sold {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
+  #punks-carousel .owl-item .group .punk .name-background span {
+    font-size: 2vw;
+  }
+  #punks-carousel .owl-item .group .punk .name-background a {
+    font-size: 1.5vw;
+  }
+  #punks-carousel .owl-item .group .punk .name-background a {
+    min-width: 100px;
+    max-width: unset;
+  }
+  #punks-carousel .owl-item {
+    width: 20vw;
+  }
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 600px) {
+  .trade .trade-wrapper {
+    width: 100%;
+  }
+  .auctions-wrapper .description .auctions .auction .winner {
+    font-size: 65%;
+  }
+  .auctions-wrapper .title, .auctions-wrapper .disclaimer {
+    text-align: justify;
+  }
+  .auctions-wrapper .description .auctions {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .auctions-wrapper .description .auctions .auction {
+    width: calc(50% - 10px);
+    margin-bottom: 1rem;
+  }
+  .auctions-wrapper .description .auctions .auction .feature {
+    text-align: center;
+  }
+  .stats .stats-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .stats .stats-inner .stat {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .stats .stats-inner .stat .description, .stats .stats-inner .stat .text {
+    text-align: center;
+  }
+  #punks-carousel .owl-item .group .punk .name-background span {
+    font-size: 16px;
+  }
+  #punks-carousel .owl-item .group .punk .name-background a {
+    font-size: 13px;
+  }
+  #punks-carousel .owl-item {
+    width: 50vw;
+  }
+  .segment-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .segment-wrapper .description {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    text-align: justify;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .segment-wrapper .punk-image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

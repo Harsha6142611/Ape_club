@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CryptoNuggets is an exclusive box with 3000 delicious crypto nuggets.  Each Nugget is generated from 12 types, over 15 sauces, over 15 sauce cups, and other traits! Every Nugget is unique and cool! But some of them are rarer then others.">
+    <meta name="keywords" content="CryptoNuggets Opensea Crypto NFT DeFi ETH Ethereum">
+    <meta name="author" content="Rethurd">
+    <meta property="og:title" content="CryptoNuggets" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="CryptoNuggets is an exclusive box with 3000 delicious crypto nuggets.  Each Nugget is generated from 12 types, over 15 sauces, over 15 sauce cups, and other traits! Every Nugget is unique and cool! But some of them are rarer then others.">
+    <meta property="og:url" content="https://CryptoNuggets.club/" />
+    <meta property="og:image" content="/images/favi.jpg" />
+    <meta property="og:image:secure_url" content="/images/favi.jpg" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+    <meta property="og:image:alt" content="CryptoNuggets | NFT" />
+    <title>CryptoNuggets | NFT</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link href="css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/siiimple-toast/dist/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/siiimple-toast/dist/siiimple-toast.min.js"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+        <script>const currentPage = "home";</script>
+
+    <style>
+        body, .headline, .segment-wrapper .description h3, .feature, .auctions-wrapper .description .auctions .auction .name, .auctions-wrapper .description .auctions .auction .winner, .btnBuy  {
+        font-family: 'Marvel', sans-serif;
+        }
+
+        .auction .feature { 
+            margin-bottom: 10px;
+        }
+        
+        .text { 
+            line-height: 1.5rem;
+            text-align: justify;
+            font-family: 'Marvel', sans-serif;
+        }
+        
+        .auctions-wrapper .description .auctions .auction .winner  {
+            line-height: 1.5rem;   
+                                font-family: 'Marvel', sans-serif;
+        }
+        
+        .disclaimer {
+            line-height: 1.5rem;
+           margin-right: auto;
+            margin-left: auto;
+                                font-family: 'Marvel', sans-serif;
+
+        }
+        .disclaimermobile {
+            line-height: 1.5rem;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .auctions-wrapper .description .auctions .auction .name {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .total {
+            font-weight: 900 !important;
+            color: #c9fff6;
+            border-bottom: 1px solid #c9fff6;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .auctions-wrapper .description .auctions {
+            justify-content: center;
+        }
+        
+        .btnBuy {
+            padding: 10px;
+            font-size: 2rem;
+            background-color: #69d47c;
+            width: 300px;
+            height: auto;
+            margin: auto;
+            
+        }
+        .segment-wrapper .punk-image {
+            overflow: clip;
+            width: auto;
+            max-width: 400px;
+            height: auto;
+        }
+        
+        .segment-wrapper .punk-image img {
+            width: auto;
+            max-width: 400px;
+            height: auto;
+            border-radius: 30px;
+        }
+        
+        .modal__title {
+            color: #ff0000 !important;
+            margin: auto;
+            vertical-align: top
+        }
+        
+        .button, .button__blue, .button__secondary, .button__wide, .button__wide__secondary {
+            background-color: #69d47c;
+        }
+        
+        .headline {
+            font-size: 50px;
+            margin: 50px;
+        }
+        
+        
+        .monstrocontainer {
+    bottom: 0;
+    left: 0;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+.monstrocontainer img {
+    width: 100%;
+    height: auto;
+      border-radius: 30px;
+      
+}
+
+    @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap');
+
+body2 {
+	 font-family: 'Saira Condensed', sans-serif;
+	background: #353535;
+	color: #FFF;
+}
+.jumbotron h1 {
+	color: #353535;
+}
+footer2 {
+  margin-bottom: 0 !important;
+  margin-top: 0;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+}
+span.icon {
+	margin: 0 5px;
+	color: #D64541;
+}
+h2 {
+	color: #BDC3C7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.mrng-60-top {
+	margin-top: 60px;
+}
+/* Global Button Styles */
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 5px auto 0;
+	padding: 5px 5px;
+	color: #fff;
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.animated-button-mint:link, a.animated-button-mint:visited {
+	position: relative;
+	display: block;
+	margin: 5px auto 0;
+	padding: 5px 5px;
+	color: #FFFD9C;
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.animated-button-mint2:link, a.animated-button-mint2:visited {
+	color: #FFFD9C;
+	font-weight: bold;
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+	content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	z-index: -1;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+	color: #FFF;
+	text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+	height: 450%;
+}
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 5px auto 0;
+	padding: 5px 5px;
+	color: #fff;
+	font-size:14px;
+	border-radius: 0;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+}
+
+.centerimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.img_mobile {
+    margin:auto;
+    width: 100%; 
+    max-width: 100%; 
+    height: auto;
+}
+      
+      .centerimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+      
+      
+   div.6u{
+width:50%;
+clear:none;
+margin-left:auto;
+margin-right:auto;
+
+}  
+
+hr{
+        height: 2px;
+        background-color: #0f2335;
+        border: none;
+    }
+      
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+       
+       
+.countdown-title {
+  color: white;
+  font-weight: 100;
+  font-size: 25px;
+  margin: 40px 0px 20px;
+}
+
+.countdown {
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+
+.countdown-number {
+  padding: 10px;
+  border-radius: 3px;
+  
+  display: inline-block;
+}
+
+.countdown-time {
+  padding: 15px;
+  border-radius: 3px;
+  
+  display: inline-block;
+}
+
+.countdown-text {
+  display: block;
+  color: #396;
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+      
+      a.button2{
+  display:inline-block;
+	
+	text-decoration:none;	
+	
+	color:rgba(28, 190, 131, 1);
+	brackground-color:transparent;
+	border:1px solid rgba(28, 190, 131, 1);
+	border-radius:100px;
+	
+	padding: .3em 1.2em;
+	margin:5px;
+			
+	background-size: 200% 100%;	
+	background-image: linear-gradient(to right, transparent 50%, rgba(28, 190, 131, 1) 50%);
+	transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+}
+
+a.button2:hover{
+	color:rgba(255, 255, 255, 1);
+	background-color:rgba(28, 190, 131, 1);
+	background-position: -100% 100%;
+}
+ 
+        
+    </style>
+    
+
+ 
+
+ 
+
+</head>
+<body>
+    
+    
+
+    <div class="background-wrapper container">
+        <div class="container">
+                     
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2 class="mrng-30-top"></h2>
+       <a href="index.html"><img src="images/MAINLOGO.png" alt="Logo"></a>
+                      <h3 class="title">CryptoNuggets
+    </div>
+  </div>
+   <a href="index.html"><img src="images/opensea_banner.png" alt="Logo"></a>
+ 
+  
+ 
+    <div class="col-md-12 text-center">
+         
+     
+    
+      
+      
+     
+<div id="countdown" class="countdown">
+  <div class="countdown-number">
+    <span class="days countdown-time"></span>
+    
+  </div>
+  <div class="countdown-number">
+    <span class="hours countdown-time"></span>
+    
+  </div>
+  <div class="countdown-number">
+    <span class="minutes countdown-time"></span>
+   
+  </div>
+  <div class="countdown-number">
+    <span class="seconds countdown-time"></span>
+    
+  </div>
+</div>
+
+    
+      <div><font size="4">Launch:&nbsp&nbsp&nbspAugust&nbsp 2</font></div>
+                                
+ 
+            </div>        
+    </div>
+                    
+      <br><br><br><br>  <br><br><br><br> <br><br><br> 
+        
+
+    <footer>
+        <div class="footer-inner">© 2021 | CryptoNuggets <br>
+            <a href="https://twitter.com/cryptonuggets3k" target="_blank" class='feature'><img src="images/twitternew.png"  width="30" height="30" alt=""></a> &nbsp;
+            <a href=" https://discord.gg/v9W5GKkWS2" target="_blank" class='feature'><img src="images/discordnew.png"  width="25" height="25" alt=""></a> 
+
+            
+        </div>
+    </footer>
+<script type="text/javascript">
+        function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = '08/01/2021';    // Международный формат времени
+initializeClock('countdown', deadline);
+ </script> 
+ 
+</body>
+    
+</html>
