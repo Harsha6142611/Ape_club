@@ -577,23 +577,63 @@ const stakeMicesToCheeth = async () => {
 
     const cheeth = await intializeCheethContract();
     const anonymice = await initializeAnonymiceContract();
-    const _stakedAnonymices = await cheeth.methods.getTokensStaked(await getAddress());
+    const address = await getAddress();
+    
+    // Check user's ETH balance
+    const web3 = await initializeWeb3();
+    const balance = await web3.eth.getBalance(address);
+    
+    // Estimate gas for the transaction
+    try {
+      const gasEstimate = await cheeth.methods.stakeByIds(_micesArray).estimateGas({ from: address });
+      const gasPrice = await web3.eth.getGasPrice();
+      const gasCost = web3.utils.toBN(gasEstimate).mul(web3.utils.toBN(gasPrice));
+      
+      if (web3.utils.toBN(balance).lt(gasCost)) {
+        alert("Insufficient funds for gas. Please make sure you have enough ETH to cover gas fees.");
+        return;
+      }
+    } catch (gasError) {
+      console.error("Gas estimation failed:", gasError);
+      alert("Transaction might fail. Please make sure you have enough ETH for gas fees.");
+    }
 
-    if (!(await anonymice.methods.isApprovedForAll(await getAddress(), cheethAddress))) {
-      window.alert(`You need to approve your Baby first!`);
+    const _stakedAnonymices = await cheeth.methods.getTokensStaked(address).call();
+
+    if (!(await anonymice.methods.isApprovedForAll(address, cheethAddress).call())) {
+      alert("You need to approve your Baby first!");
       return;
     }
 
     if (_stakedAnonymices.length >= 10) {
-      window.alert(`Maximum of 10 Staked per address reached already!`);
+      alert("Maximum of 10 Staked per address reached already!");
       return;
     }
 
-    await cheeth.methods.stakeByIds(_micesArray).send({ from: await getAddress() });
+    // Add loading indicator or message
+    const stakeButton = document.querySelector('[onclick="stakeMicesToCheeth()"]');
+    const originalText = stakeButton.textContent;
+    stakeButton.textContent = "Staking...";
+    stakeButton.style.opacity = "0.5";
+
+    await cheeth.methods.stakeByIds(_micesArray).send({ 
+      from: address,
+      maxPriorityFeePerGas: null,
+      maxFeePerGas: null 
+    });
+    
     window.location.reload();
   } catch (error) {
     console.error("Transaction failed:", error);
-    if (error.message.includes("Invalid ID")) {
+    
+    // Reset button state if there was an error
+    const stakeButton = document.querySelector('[onclick="stakeMicesToCheeth()"]');
+    stakeButton.textContent = "Stake Baby";
+    stakeButton.style.opacity = "1";
+
+    if (error.message.includes("insufficient funds")) {
+      alert("Insufficient funds. Please make sure you have enough ETH to cover the transaction and gas fees.");
+    } else if (error.message.includes("Invalid ID")) {
       alert(error.message);
     } else if (error.message.includes("MetaMask")) {
       alert(error.message);
