@@ -577,60 +577,28 @@ const stakeMicesToCheeth = async () => {
 
     const cheeth = await intializeCheethContract();
     const anonymice = await initializeAnonymiceContract();
-    const userAddress = await getAddress();
-    
-    console.log("Checking staked tokens...");
-    const _stakedAnonymices = await cheeth.methods.getTokensStaked(userAddress).call();
-    console.log("Currently staked tokens:", _stakedAnonymices);
+    const _stakedAnonymices = await cheeth.methods.getTokensStaked(await getAddress());
 
-    console.log("Checking approval status...");
-    const isApproved = await anonymice.methods.isApprovedForAll(userAddress, cheethAddress).call();
-    if (!isApproved) {
-      alert(`You need to approve your Baby first!`);
+    if (!(await anonymice.methods.isApprovedForAll(await getAddress(), cheethAddress))) {
+      window.alert(`You need to approve your Baby first!`);
       return;
     }
 
     if (_stakedAnonymices.length >= 10) {
-      alert(`Maximum of 10 Staked per address reached already!`);
+      window.alert(`Maximum of 10 Staked per address reached already!`);
       return;
     }
 
-    // Check if user owns the tokens they're trying to stake
-    console.log("Checking token ownership...");
-    for (const tokenId of _micesArray) {
-      try {
-        const owner = await anonymice.methods.ownerOf(tokenId).call();
-        if (owner.toLowerCase() !== userAddress.toLowerCase()) {
-          throw new Error(`You don't own Baby #${tokenId}`);
-        }
-      } catch (error) {
-        throw new Error(`Error checking ownership of Baby #${tokenId}: ${error.message}`);
-      }
-    }
-
-    console.log("Initiating staking transaction...");
-    const gasEstimate = await cheeth.methods.stakeByIds(_micesArray).estimateGas({ from: userAddress });
-    console.log("Estimated gas:", gasEstimate);
-
-    const tx = await cheeth.methods.stakeByIds(_micesArray).send({ 
-      from: userAddress,
-      gas: Math.floor(gasEstimate * 1.2) // Add 20% buffer to gas estimate
-    });
-    
-    console.log("Staking transaction successful:", tx);
-    alert("Staking successful!");
+    await cheeth.methods.stakeByIds(_micesArray).send({ from: await getAddress() });
     window.location.reload();
-    
   } catch (error) {
-    console.error("Staking failed:", error);
+    console.error("Transaction failed:", error);
     if (error.message.includes("Invalid ID")) {
       alert(error.message);
     } else if (error.message.includes("MetaMask")) {
       alert(error.message);
-    } else if (error.message.includes("ownerOf")) {
-      alert("You don't own one or more of the Baby IDs you're trying to stake");
     } else {
-      alert("Staking failed: " + error.message);
+      alert("Transaction failed: " + error.message);
     }
   }
 };
