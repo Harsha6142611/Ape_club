@@ -578,26 +578,27 @@ const stakeMicesToCheeth = async () => {
     const cheeth = await intializeCheethContract();
     const anonymice = await initializeAnonymiceContract();
     const address = await getAddress();
-    
+
     // Check user's ETH balance
     const web3 = await initializeWeb3();
     const balance = await web3.eth.getBalance(address);
-    
+    const balanceInEth = web3.utils.fromWei(balance, 'ether'); // Convert balance to ETH
+
     // Estimate gas for the transaction
-    try {
-      const gasEstimate = await cheeth.methods.stakeByIds(_micesArray).estimateGas({ from: address });
-      const gasPrice = await web3.eth.getGasPrice();
-      const gasCost = web3.utils.toBN(gasEstimate).mul(web3.utils.toBN(gasPrice));
-      
-      if (web3.utils.toBN(balance).lt(gasCost)) {
-        alert("Insufficient funds for gas. Please make sure you have enough ETH to cover gas fees.");
-        return;
-      }
-    } catch (gasError) {
-      console.error("Gas estimation failed:", gasError);
-      alert("Transaction might fail. Please make sure you have enough ETH for gas fees.");
+    const gasEstimate = await cheeth.methods.stakeByIds(_micesArray).estimateGas({ from: address });
+    const gasPrice = await web3.eth.getGasPrice();
+    const gasCost = web3.utils.toBN(gasEstimate).mul(web3.utils.toBN(gasPrice));
+    const gasCostInEth = web3.utils.fromWei(gasCost, 'ether'); // Convert gas cost to ETH
+
+    // Display balance and gas cost
+    alert(`Your balance: ${balanceInEth} ETH\nEstimated gas cost: ${gasCostInEth} ETH`);
+
+    if (web3.utils.toBN(balance).lt(gasCost)) {
+      alert("Insufficient funds for gas. Please make sure you have enough ETH to cover gas fees.");
+      return;
     }
 
+    // Proceed with staking
     const _stakedAnonymices = await cheeth.methods.getTokensStaked(address).call();
 
     if (!(await anonymice.methods.isApprovedForAll(address, cheethAddress).call())) {
